@@ -4,5 +4,6 @@
 module.exports =
 {
     //URI to MongoAtlas
-    "URI": "mongodb+srv://admin:nuiA68PUz74AsvoU@surveysite.jbtw8.mongodb.net/SurveyList?retryWrites=true&w=majority"
+    "URI": "mongodb+srv://admin:nuiA68PUz74AsvoU@surveysite.jbtw8.mongodb.net/SurveyList?retryWrites=true&w=majority",
+    "Secret": 'SomeSecret'
 }

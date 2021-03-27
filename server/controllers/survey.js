@@ -18,8 +18,11 @@ module.exports.displaySurveyList = (req, res, next) => {
         else
         {
             res.render('survey/list', 
-            {title: 'Survey List', 
-            SurveyList: surveyList});
+            {
+            title: 'Survey List', 
+            SurveyList: surveyList,
+            displayName: req.user ? req.user.displayName : '' 
+        });
         }
     }).sort({name: 1});
 }
@@ -27,7 +30,9 @@ module.exports.displaySurveyList = (req, res, next) => {
 //Display the Create A Survey page
 module.exports.displayAddPage = (req, res, next) => {
     res.render('survey/add', 
-            {title: 'Create A Survey'});
+            {title: 'Create A Survey',
+            displayName: req.user ? req.user.displayName : '' 
+        });
 }
 
 //Process the Add survey operation
@@ -69,7 +74,9 @@ module.exports.displayEditPage = (req, res, next) => {
             //show the edit view
             res.render('survey/edit', 
             {title: 'Edit Survey', 
-            survey: surveyToEdit})
+            survey: surveyToEdit,
+            displayName: req.user ? req.user.displayName : '' 
+        })
         }
     });
 }
@@ -116,7 +123,9 @@ module.exports.displayFillPage = (req, res, next) => {
             //show the edit view
             res.render('survey/fill', 
             {title: 'Fill Survey', 
-            survey: surveyToFill})
+            survey: surveyToFill,
+            displayName: req.user ? req.user.displayName : '' 
+        })
         }
     });
 }

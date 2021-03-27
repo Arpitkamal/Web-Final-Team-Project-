@@ -20,7 +20,9 @@ module.exports.displayHomePage = (req, res, next) => {
 
             res.render('index', 
             {title: 'Home', 
-            SurveyList: surveyList});
+            SurveyList: surveyList,
+            displayName: req.user ? req.user.displayName : '' 
+        });
         }
     }).sort({name: 1});
 }

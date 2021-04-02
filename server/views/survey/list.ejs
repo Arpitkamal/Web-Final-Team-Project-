@@ -1,4 +1,4 @@
-<!--COMP229-w2021-TeamProject server/views/contact/list.ejs; Dominators; 19Mar2021-->
+<!--COMP229-w2021-TeamProject server/views/contact/list.ejs; Dominators; 2April2021-->
 
 <%- include ../partials/header.ejs %>
 
@@ -11,8 +11,10 @@
     <div class="col-lg-12">
         <div class="bs-component">
             <h1 class="text-center "><%= title %></h1>
+            <% if(typeof displayName == 'string' && displayName) { %>
                 <a href="/surveylist/add" class="btn btn-primary btn-block" role="button">
                 <i class="fas fa-plus-circle text-center"> Create a Survey</i> </a>
+            <% } %>
             <br>
             <table class="table table-bordered table-striped table-hover">
             <!-- Heading Row-->

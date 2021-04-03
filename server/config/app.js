@@ -71,6 +71,17 @@ app.use(passport.session());
 let userModel = require('../models/user');
 let User = userModel.User;
 
+/*
+  --COMP229-w2021-TeamProject server/config/app.js;
+  --Group Name:  Dominators 
+  --Date Created: 02, April, 2021 
+  --Student Name: Ho Yin Lai - 301162000
+  --Student Name: Laxman Gothe - 301102988
+  --Student Name: Sissi Kan - 301170042
+  --Student Name: Arpit Kamal - 301152116
+  --Student Name: Janesha Sharma - 301093302
+  */
+
 // implement a User Authentication Strategy
 passport.use(User.createStrategy());
 
